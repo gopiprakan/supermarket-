@@ -89,16 +89,23 @@ ul {
 
 .search-container input {
     flex-grow: 1;
+    height: 100%;
+    margin: 0;
     padding: 0 15px;
     border: none;
     outline: none;
     font-size: 15px;
+    box-sizing: border-box;
+    line-height: normal;
 }
 
 .search-btn {
     background-color: var(--accent-orange);
     border: none;
     width: 45px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -106,6 +113,7 @@ ul {
     font-size: 16px;
     color: #111;
     transition: var(--transition);
+    box-sizing: border-box;
 }
 
 .search-btn:hover {
@@ -179,14 +187,20 @@ ul {
 .mobile-search input {
     width: 100%;
     height: 40px;
+    margin: 0;
     border-radius: var(--radius-sm) 0 0 var(--radius-sm);
     padding: 0 15px;
     border: none;
     outline: none;
+    box-sizing: border-box;
+    line-height: normal;
 }
 
 .mobile-search .search-btn {
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    height: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Sub Header */
@@ -735,12 +749,15 @@ html {
 
 .input-group input {
     width: 100%;
-    padding: 10px;
+    height: 40px;
+    padding: 0 10px;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     font-size: 14px;
     outline: none;
     transition: border-color 0.2s;
+    box-sizing: border-box;
+    line-height: normal;
 }
 
 .input-group input:focus {
