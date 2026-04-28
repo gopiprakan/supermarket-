@@ -29,7 +29,7 @@
             </div>
             
             <div class="header-actions">
-                <div class="action-item desktop-only">
+                <div class="action-item desktop-only" id="login-btn">
                     <span class="greeting">Hello, Sign in</span>
                     <span class="bold-text">Account & Lists</span>
                 </div>
@@ -53,13 +53,10 @@
 
         <nav class="sub-header">
             <ul class="nav-links">
-                <li><a href="#" class="active"><i class="fas fa-bars"></i> All</a></li>
-                <li><a href="#">Fresh Vegetables</a></li>
-                <li><a href="#">Fruits</a></li>
-                <li><a href="#">Dairy & Eggs</a></li>
-                <li><a href="#">Meat & Seafood</a></li>
-                <li><a href="#">Bakery</a></li>
-                <li><a href="#">Today's Deals</a></li>
+                <li><a href="#hero" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#bestsellers">Bestselling Groceries</a></li>
+                <li><a href="#deals">Today's Deals</a></li>
             </ul>
         </nav>
     </header>
@@ -67,7 +64,7 @@
     <!-- Mobile Sidebar Menu -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
+        <div class="sidebar-header" id="sidebar-login-btn" style="cursor:pointer;">
             <i class="fas fa-user-circle"></i>
             <h2>Hello, Sign in</h2>
             <button class="close-btn" id="close-btn"><i class="fas fa-times"></i></button>
@@ -82,10 +79,10 @@
             <hr>
             <h3>Categories</h3>
             <ul>
-                <li><a href="#">Fresh Vegetables <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">Fruits <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">Dairy & Eggs <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">Meat & Seafood <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#categories">Spices & Masalas <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#categories">Pulses & Dals <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#categories">Rice & Atta <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#categories">Dairy & Sweets <i class="fas fa-chevron-right"></i></a></li>
             </ul>
         </div>
     </div>
@@ -93,87 +90,87 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="hero" class="hero fade-in-section">
             <div class="hero-image-container">
-                <img src="hero_banner.png" alt="Fresh Groceries Banner" class="hero-image">
+                <img src="indian_hero_banner.png" alt="Fresh Indian Groceries Banner" class="hero-image">
                 <div class="hero-gradient"></div>
             </div>
         </section>
 
         <!-- Categories Grid -->
-        <section class="category-cards">
+        <section id="categories" class="category-cards fade-in-section delay-1">
             <div class="card">
-                <h3>Fresh Fruits</h3>
-                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=400&q=80" alt="Fruits">
-                <a href="#">Shop now</a>
+                <h3>Premium Spices</h3>
+                <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=400&q=80" alt="Spices">
+                <a href="#bestsellers">Shop now</a>
             </div>
             <div class="card">
-                <h3>Organic Vegetables</h3>
-                <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=400&q=80" alt="Vegetables">
-                <a href="#">Shop now</a>
+                <h3>Pulses & Dals</h3>
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f39ce9b1?auto=format&fit=crop&w=400&q=80" alt="Pulses">
+                <a href="#bestsellers">Shop now</a>
             </div>
             <div class="card">
-                <h3>Dairy & Eggs</h3>
-                <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=400&q=80" alt="Dairy">
-                <a href="#">Shop now</a>
+                <h3>Rice & Atta</h3>
+                <img src="https://images.unsplash.com/photo-1613524614138-b7eb4e9514da?auto=format&fit=crop&w=400&q=80" alt="Rice">
+                <a href="#bestsellers">Shop now</a>
             </div>
             <div class="card">
-                <h3>Bakery Fresh</h3>
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Bakery">
-                <a href="#">Shop now</a>
+                <h3>Pure Desi Ghee</h3>
+                <img src="https://plus.unsplash.com/premium_photo-1664301540861-19711674ea4c?auto=format&fit=crop&w=400&q=80" alt="Dairy">
+                <a href="#bestsellers">Shop now</a>
             </div>
         </section>
 
         <!-- Products Section -->
-        <section class="products-section">
+        <section id="bestsellers" class="products-section fade-in-section delay-2">
             <div class="section-header">
-                <h2>Bestselling Groceries</h2>
+                <h2>Bestselling Indian Groceries</h2>
                 <a href="#">See more</a>
             </div>
-            <div class="products-carousel" id="bestsellers">
+            <div class="products-carousel">
                 <!-- Product 1 -->
                 <div class="product-item">
                     <div class="discount-badge">20% OFF</div>
-                    <img src="https://images.unsplash.com/photo-1587049352851-8d4e89134780?auto=format&fit=crop&w=300&q=80" alt="Avocado">
+                    <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?auto=format&fit=crop&w=300&q=80" alt="Basmati Rice">
                     <div class="product-info">
-                        <h4 class="product-title">Organic Hass Avocados, 4 Count</h4>
+                        <h4 class="product-title">Premium Long Grain Basmati Rice, 5kg</h4>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(1,245)</span>
                         </div>
                         <div class="price">
-                            <span class="current-price">$4.99</span>
-                            <span class="old-price">$6.25</span>
+                            <span class="current-price">₹850</span>
+                            <span class="old-price">₹1,050</span>
                         </div>
                         <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 2 -->
                 <div class="product-item">
-                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=300&q=80" alt="Mangoes">
+                    <img src="https://images.unsplash.com/photo-1615486171448-4fd6d11634db?auto=format&fit=crop&w=300&q=80" alt="Turmeric Powder">
                     <div class="product-info">
-                        <h4 class="product-title">Fresh Mangoes, 1 lb</h4>
+                        <h4 class="product-title">Organic Turmeric (Haldi) Powder, 500g</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(832)</span>
                         </div>
                         <div class="price">
-                            <span class="current-price">$2.49/lb</span>
+                            <span class="current-price">₹150</span>
                         </div>
                         <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 3 -->
                 <div class="product-item">
-                    <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=300&q=80" alt="Bread">
+                    <img src="https://images.unsplash.com/photo-1542617757-0ceebdd1d51a?auto=format&fit=crop&w=300&q=80" alt="Toor Dal">
                     <div class="product-info">
-                        <h4 class="product-title">Artisan Sourdough Loaf</h4>
+                        <h4 class="product-title">Unpolished Toor Dal (Arhar), 1kg</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(450)</span>
                         </div>
                         <div class="price">
-                            <span class="current-price">$5.99</span>
+                            <span class="current-price">₹180</span>
                         </div>
                         <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
@@ -181,30 +178,30 @@
                 <!-- Product 4 -->
                 <div class="product-item">
                     <div class="discount-badge">Top Deal</div>
-                    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=300&q=80" alt="Milk">
+                    <img src="https://images.unsplash.com/photo-1605295556201-923c8a98dd9c?auto=format&fit=crop&w=300&q=80" alt="Garam Masala">
                     <div class="product-info">
-                        <h4 class="product-title">Organic Whole Milk, 1 Gallon</h4>
+                        <h4 class="product-title">Authentic Garam Masala Blend, 200g</h4>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(3,120)</span>
                         </div>
                         <div class="price">
-                            <span class="current-price">$6.49</span>
+                            <span class="current-price">₹220</span>
                         </div>
                         <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 5 -->
                 <div class="product-item">
-                    <img src="https://images.unsplash.com/photo-1596647276505-1a3eb71e712a?auto=format&fit=crop&w=300&q=80" alt="Tomatoes">
+                    <img src="https://images.unsplash.com/photo-1632732959828-bc8da22467b6?auto=format&fit=crop&w=300&q=80" alt="Atta">
                     <div class="product-info">
-                        <h4 class="product-title">Vine-Ripened Tomatoes</h4>
+                        <h4 class="product-title">Whole Wheat Chakki Atta, 10kg</h4>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                             <span>(620)</span>
                         </div>
                         <div class="price">
-                            <span class="current-price">$3.99/lb</span>
+                            <span class="current-price">₹450</span>
                         </div>
                         <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
@@ -212,12 +209,12 @@
             </div>
         </section>
         
-        <section class="banner-section">
+        <section id="deals" class="banner-section fade-in-section delay-3">
             <div class="promo-banner">
                 <div class="promo-content">
-                    <h2>Fresh Delivered to Your Door</h2>
-                    <p>Get 20% off your first order with code <strong>FRESH20</strong></p>
-                    <button class="shop-now-btn">Shop Fresh Deals</button>
+                    <h2>Authentic Indian Flavors Delivered</h2>
+                    <p>Get 20% off your first festive order with code <strong>FESTIVE20</strong></p>
+                    <button class="shop-now-btn" onclick="document.getElementById('bestsellers').scrollIntoView({behavior: 'smooth'})">Shop Festive Deals</button>
                 </div>
             </div>
         </section>
@@ -265,6 +262,28 @@
             <p>&copy; 2026 FreshCart.com, Inc. or its affiliates</p>
         </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Sign In to FreshCart</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Email or Mobile Number</label>
+                    <input type="text" id="email" placeholder="Enter your email or mobile" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="auth-btn">Continue</button>
+            </form>
+            <div class="auth-footer">
+                <p>New to FreshCart? <a href="#">Create an account</a></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
