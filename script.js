@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-btn');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
-    const backToTopBtn = document.getElementById('back-to-top');
     const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
     const cartCount = document.querySelector('.cart-count');
 
@@ -22,31 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
 
-    menuBtn.addEventListener('click', openSidebar);
-    closeBtn.addEventListener('click', closeSidebar);
-    overlay.addEventListener('click', closeSidebar);
-
-    // Back to top functionality
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    if (menuBtn) menuBtn.addEventListener('click', openSidebar);
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
 
     // Add to cart functionality
     addToCartBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             cartTotal++;
-            cartCount.textContent = cartTotal;
+            if (cartCount) cartCount.textContent = cartTotal;
             
             // Animation effect
             this.textContent = 'Added!';
-            this.style.backgroundColor = '#f7ca00';
+            this.classList.add('added');
             
             setTimeout(() => {
                 this.textContent = 'Add to Cart';
-                this.style.backgroundColor = '';
+                this.classList.remove('added');
             }, 1000);
         });
     });

@@ -3,86 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshCart - Your Online Supermarket</title>
+    <title>FreshCart Neo | Futuristic Grocery</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="main-header">
-        <div class="header-top">
-            <div class="menu-icon" id="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-            
+        <div class="header-container">
             <div class="logo">
-                <i class="fas fa-shopping-basket"></i>
-                <span>FreshCart</span>
+                <i class="fas fa-leaf"></i>
+                <span>FreshCart Neo</span>
             </div>
             
-            <div class="search-container">
-                <input type="text" placeholder="Search for groceries, organic products...">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
+            <nav class="nav-links">
+                <a href="#hero" class="active">Home</a>
+                <a href="#categories">Collections</a>
+                <a href="#bestsellers">Bestsellers</a>
+                <a href="#deals">Deals</a>
+            </nav>
             
             <div class="header-actions">
-                <div class="action-item desktop-only" id="login-btn">
-                    <span class="greeting">Hello, Sign in</span>
-                    <span class="bold-text">Account & Lists</span>
-                </div>
-                <div class="action-item desktop-only">
-                    <span class="greeting">Returns</span>
-                    <span class="bold-text">& Orders</span>
-                </div>
-                <div class="action-item cart-item">
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                <button class="action-btn desktop-only" id="login-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
-                    <span class="bold-text desktop-only cart-text">Cart</span>
-                </div>
+                </button>
+                <button class="action-btn menu-btn" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-        
-        <!-- Mobile Search (Visible only on mobile) -->
-        <div class="mobile-search">
-            <input type="text" placeholder="Search FreshCart...">
-            <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-
-        <nav class="sub-header">
-            <ul class="nav-links">
-                <li><a href="#hero" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#bestsellers">Bestselling Groceries</a></li>
-                <li><a href="#deals">Today's Deals</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Mobile Sidebar Menu -->
+    <!-- Mobile Sidebar -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <div class="sidebar" id="sidebar">
-        <div class="sidebar-header" id="sidebar-login-btn" style="cursor:pointer;">
-            <i class="fas fa-user-circle"></i>
-            <h2>Hello, Sign in</h2>
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Neo</span>
+            </div>
             <button class="close-btn" id="close-btn"><i class="fas fa-times"></i></button>
         </div>
         <div class="sidebar-content">
-            <h3>Trending</h3>
-            <ul>
-                <li><a href="#">Best Sellers</a></li>
-                <li><a href="#">New Releases</a></li>
-                <li><a href="#">Movers & Shakers</a></li>
-            </ul>
-            <hr>
-            <h3>Categories</h3>
-            <ul>
-                <li><a href="#categories">Spices & Masalas <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#categories">Pulses & Dals <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#categories">Rice & Atta <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#categories">Dairy & Sweets <i class="fas fa-chevron-right"></i></a></li>
+            <ul style="display:flex; flex-direction:column; gap: 20px;">
+                <li><a href="#hero" style="color:var(--text-white); font-size:18px;">Home</a></li>
+                <li><a href="#categories" style="color:var(--text-white); font-size:18px;">Collections</a></li>
+                <li><a href="#bestsellers" style="color:var(--text-white); font-size:18px;">Bestsellers</a></li>
+                <li><a href="#deals" style="color:var(--text-white); font-size:18px;">Deals</a></li>
+                <li><a href="#" id="sidebar-login-btn" style="color:var(--accent-neon); font-size:18px;">Sign In</a></li>
             </ul>
         </div>
     </div>
@@ -90,132 +62,136 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero fade-in-section">
-            <div class="hero-image-container">
-                <img src="indian_hero_banner.png" alt="Fresh Indian Groceries Banner" class="hero-image">
-                <div class="hero-gradient"></div>
+        <section id="hero" class="hero glass fade-in-section">
+            <img src="indian_hero_banner.png" alt="Fresh Groceries" class="hero-image">
+            <div class="hero-gradient"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Next-Gen Grocery</div>
+                <h1>Experience The Future of Fresh.</h1>
+                <p>Authentic Indian flavors delivered at lightspeed. Premium quality, carefully curated, and beautifully packaged.</p>
+                <button class="btn-primary" onclick="document.getElementById('categories').scrollIntoView({behavior: 'smooth'})">
+                    Explore Collections <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </section>
 
-        <!-- Categories Grid -->
+        <!-- Categories -->
+        <div class="section-header fade-in-section delay-1">
+            <h2>Curated Collections</h2>
+        </div>
         <section id="categories" class="category-cards fade-in-section delay-1">
-            <div class="card">
+            <div class="cat-card glass">
+                <div class="cat-img-wrapper">
+                    <img src="spice_image.png" alt="Spices">
+                </div>
                 <h3>Premium Spices</h3>
-                <img src="spice_image.png" alt="Spices">
-                <a href="#bestsellers">Shop now</a>
             </div>
-            <div class="card">
+            <div class="cat-card glass">
+                <div class="cat-img-wrapper">
+                    <img src="dal_image.png" alt="Pulses">
+                </div>
                 <h3>Pulses & Dals</h3>
-                <img src="dal_image.png" alt="Pulses">
-                <a href="#bestsellers">Shop now</a>
             </div>
-            <div class="card">
+            <div class="cat-card glass">
+                <div class="cat-img-wrapper">
+                    <img src="rice_image.png" alt="Rice">
+                </div>
                 <h3>Rice & Atta</h3>
-                <img src="rice_image.png" alt="Rice">
-                <a href="#bestsellers">Shop now</a>
             </div>
-            <div class="card">
+            <div class="cat-card glass">
+                <div class="cat-img-wrapper">
+                    <img src="ghee_image.png" alt="Dairy">
+                </div>
                 <h3>Pure Desi Ghee</h3>
-                <img src="ghee_image.png" alt="Dairy">
-                <a href="#bestsellers">Shop now</a>
             </div>
         </section>
 
-        <!-- Products Section -->
+        <!-- Bestsellers -->
+        <div class="section-header fade-in-section delay-2">
+            <h2>Trending Now</h2>
+        </div>
         <section id="bestsellers" class="products-section fade-in-section delay-2">
-            <div class="section-header">
-                <h2>Bestselling Indian Groceries</h2>
-                <a href="#">See more</a>
-            </div>
-            <div class="products-carousel">
+            <div class="products-grid">
                 <!-- Product 1 -->
-                <div class="product-item">
-                    <div class="discount-badge">20% OFF</div>
-                    <img src="rice_image.png" alt="Basmati Rice">
-                    <div class="product-info">
-                        <h4 class="product-title">Premium Long Grain Basmati Rice, 5kg</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>(1,245)</span>
+                <div class="prod-card glass">
+                    <div class="prod-badge">Featured</div>
+                    <img src="rice_image.png" alt="Basmati Rice" class="prod-img">
+                    <div class="prod-info">
+                        <h4 class="prod-title">Premium Long Grain Basmati Rice, 5kg</h4>
+                        <div class="prod-meta">
+                            <div class="prod-price">₹850 <span>₹1,050</span></div>
+                            <div class="prod-rating">
+                                <i class="fas fa-star"></i> 4.9 <span>(1.2k)</span>
+                            </div>
                         </div>
-                        <div class="price">
-                            <span class="current-price">₹850</span>
-                            <span class="old-price">₹1,050</span>
-                        </div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="add-btn add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 2 -->
-                <div class="product-item">
-                    <img src="spice_image.png" alt="Turmeric Powder">
-                    <div class="product-info">
-                        <h4 class="product-title">Organic Turmeric (Haldi) Powder, 500g</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(832)</span>
+                <div class="prod-card glass">
+                    <img src="spice_image.png" alt="Turmeric" class="prod-img">
+                    <div class="prod-info">
+                        <h4 class="prod-title">Organic Turmeric (Haldi) Powder, 500g</h4>
+                        <div class="prod-meta">
+                            <div class="prod-price">₹150</div>
+                            <div class="prod-rating">
+                                <i class="fas fa-star"></i> 4.8 <span>(832)</span>
+                            </div>
                         </div>
-                        <div class="price">
-                            <span class="current-price">₹150</span>
-                        </div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="add-btn add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 3 -->
-                <div class="product-item">
-                    <img src="dal_image.png" alt="Toor Dal">
-                    <div class="product-info">
-                        <h4 class="product-title">Unpolished Toor Dal (Arhar), 1kg</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>(450)</span>
+                <div class="prod-card glass">
+                    <img src="dal_image.png" alt="Toor Dal" class="prod-img">
+                    <div class="prod-info">
+                        <h4 class="prod-title">Unpolished Toor Dal (Arhar), 1kg</h4>
+                        <div class="prod-meta">
+                            <div class="prod-price">₹180</div>
+                            <div class="prod-rating">
+                                <i class="fas fa-star"></i> 4.7 <span>(450)</span>
+                            </div>
                         </div>
-                        <div class="price">
-                            <span class="current-price">₹180</span>
-                        </div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="add-btn add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div class="product-item">
-                    <div class="discount-badge">Top Deal</div>
-                    <img src="masala_image.png" alt="Garam Masala">
-                    <div class="product-info">
-                        <h4 class="product-title">Authentic Garam Masala Blend, 200g</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(3,120)</span>
+                <div class="prod-card glass">
+                    <img src="masala_image.png" alt="Garam Masala" class="prod-img">
+                    <div class="prod-info">
+                        <h4 class="prod-title">Authentic Garam Masala Blend, 200g</h4>
+                        <div class="prod-meta">
+                            <div class="prod-price">₹220</div>
+                            <div class="prod-rating">
+                                <i class="fas fa-star"></i> 5.0 <span>(3.1k)</span>
+                            </div>
                         </div>
-                        <div class="price">
-                            <span class="current-price">₹220</span>
-                        </div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="add-btn add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product 5 -->
-                <div class="product-item">
-                    <img src="atta_image.png" alt="Atta">
-                    <div class="product-info">
-                        <h4 class="product-title">Whole Wheat Chakki Atta, 10kg</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                            <span>(620)</span>
+                <div class="prod-card glass">
+                    <img src="atta_image.png" alt="Atta" class="prod-img">
+                    <div class="prod-info">
+                        <h4 class="prod-title">Whole Wheat Chakki Atta, 10kg</h4>
+                        <div class="prod-meta">
+                            <div class="prod-price">₹450</div>
+                            <div class="prod-rating">
+                                <i class="fas fa-star"></i> 4.6 <span>(620)</span>
+                            </div>
                         </div>
-                        <div class="price">
-                            <span class="current-price">₹450</span>
-                        </div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="add-btn add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="deals" class="banner-section fade-in-section delay-3">
-            <div class="promo-banner">
-                <div class="promo-content">
-                    <h2>Authentic Indian Flavors Delivered</h2>
-                    <p>Get 20% off your first festive order with code <strong>FESTIVE20</strong></p>
-                    <button class="shop-now-btn" onclick="document.getElementById('bestsellers').scrollIntoView({behavior: 'smooth'})">Shop Festive Deals</button>
-                </div>
+        <!-- Banner -->
+        <section id="deals" class="banner fade-in-section delay-3">
+            <div class="banner-content">
+                <h2>Unlock Premium Flavors</h2>
+                <p>Join our Neo membership to get 20% off all organic and authentic Indian groceries forever.</p>
+                <button class="btn-primary">Claim Membership</button>
             </div>
         </section>
 
@@ -223,65 +199,52 @@
 
     <!-- Footer -->
     <footer>
-        <div class="back-to-top" id="back-to-top">
-            Back to top
-        </div>
-        <div class="footer-links">
-            <div class="link-column">
-                <h3>Get to Know Us</h3>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>FreshCart Neo</h3>
                 <ul>
-                    <li><a href="#">About FreshCart</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
                 </ul>
             </div>
-            <div class="link-column">
-                <h3>Make Money with Us</h3>
+            <div class="footer-col">
+                <h3>Customer Service</h3>
                 <ul>
-                    <li><a href="#">Sell on FreshCart</a></li>
-                    <li><a href="#">Become an Affiliate</a></li>
-                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
                 </ul>
             </div>
-            <div class="link-column">
-                <h3>Let Us Help You</h3>
+            <div class="footer-col">
+                <h3>Legal</h3>
                 <ul>
-                    <li><a href="#">Your Account</a></li>
-                    <li><a href="#">Your Orders</a></li>
-                    <li><a href="#">Shipping Rates & Policies</a></li>
-                    <li><a href="#">Returns & Replacements</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="logo">
-                <i class="fas fa-shopping-basket"></i>
-                <span>FreshCart</span>
-            </div>
-            <p>&copy; 2026 FreshCart.com, Inc. or its affiliates</p>
+            &copy; 2026 FreshCart Neo. All rights reserved.
         </div>
     </footer>
 
     <!-- Login Modal -->
-    <div class="modal-overlay" id="login-modal">
-        <div class="modal-content">
+    <div class="modal-overlay glass" id="login-modal">
+        <div class="modal-content glass">
             <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
-            <h2 class="modal-title">Sign In to FreshCart</h2>
+            <h2 class="modal-title">Sign In</h2>
             <form id="login-form">
                 <div class="input-group">
-                    <label for="email">Email or Mobile Number</label>
-                    <input type="text" id="email" placeholder="Enter your email or mobile" required>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter password" required>
                 </div>
-                <button type="submit" class="auth-btn">Continue</button>
+                <button type="submit" class="auth-btn">Authenticate</button>
             </form>
-            <div class="auth-footer">
-                <p>New to FreshCart? <a href="#">Create an account</a></p>
-            </div>
         </div>
     </div>
 
